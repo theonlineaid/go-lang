@@ -12,6 +12,8 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
+	// "github.com/docker/docker/api/types"
+	// "github.com/docker/docker/client"
 )
 
 type Todo struct {
@@ -90,4 +92,19 @@ func main() {
 	}
 
 	fmt.Println("Server gracefully stopped")
+
+	// cli, err := client.NewClientWithOpts(client.FromEnv, client.WithVersion("1.41"))
+	// if err != nil {
+	// 	panic(err)
+	// }
+
+	// options := types.ContainerListOptions{All: false} // Change to true if you want to list all containers
+	// containers, err := cli.ContainerList(context.Background(), options)
+	// if err != nil {
+	// 	panic(err)
+	// }
+
+	// for _, container := range containers {
+	// 	fmt.Printf("Container ID: %s, Image: %s, Status: %s\n", container.ID, container.Image, container.Status)
+	// }
 }
